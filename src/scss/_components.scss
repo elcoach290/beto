@@ -1,0 +1,109 @@
+.c-header{
+	padding-left: 15px;
+	padding-right: 15px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	
+}
+
+.c-menu{
+	display: flex;
+	li{
+		list-style: none;
+	}
+	a{
+		color: inherit;
+		text-decoration: none;
+		display: block;
+		padding: 20px 30px;
+	}
+}
+
+.c-banner{
+	// height: 700px; vamos a ver
+	&__item{
+		height: inherit;
+	}
+	&__image{
+		height: inherit;
+		width: 100%;
+		object-fit: scale-down;
+		object-position: center center;
+	}
+}
+
+.c-products{
+	display: flex;
+	justify-content: space-between;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	&__item{
+		width: 24%;
+	}
+	&__link{
+		display: block;
+		text-decoration: none;
+		color: inherit;
+		&:hover .c-products__hidden-text{
+			transform: translateY(0%);
+		} 
+	}
+	&__container-image{
+		position: relative;
+		overflow: hidden;
+	}
+	&__image{
+		max-width: 100%;
+	}
+	&__hidden-text{
+		position: absolute;
+		width: 100%;
+		bottom: 0;
+		padding: 20px 10px;
+		background-color: #ffffffb3;
+		transform: translateY(100%);
+		transition: transform 300ms;
+	}
+}
+
+.c-title{
+	background-color: #666;
+	color: #fff;
+	display: inline-block;
+	padding: 15px;
+}
+
+.c-footer{
+	background-color: rgba(47, 46, 46, 1);
+	padding-top: 40px;
+	padding-bottom: 40px;
+	color: #fff;
+	&__content{
+		display: flex;
+		justify-content: space-between;
+	}
+	&__col{
+		width: 32%;
+	}
+	&__link{
+		display: inline-block;
+		padding: 5px 10px;
+		background-color: #444;
+		color: inherit;
+		text-decoration: none;
+	}
+}
+
+.c-section{
+	&__header{
+		text-align: center;
+		max-width: 450px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+

@@ -1,0 +1,58 @@
+extends templates/layout
+
+block header
+	include templates/header
+	main
+		include templates/main-banner
+		section.l-container
+			ul.c-products
+				li.c-products__item
+					a(href="#").c-products__link
+						.c-products__container-image
+							img(src="images/polera01.png", alt="").c-products__image
+							.c-products__hidden-text|Ver Detalle
+
+						h3| CREWNECK
+						p| S/. 125.00
+				li.c-products__item
+					a(href="#").c-products__link
+						.c-products__container-image
+							img(src="images/polera02.png", alt="").c-products__image
+							.c-products__hidden-text|Ver Detalle
+
+						h3| CREWNECK
+						p| S/. 125.00
+				li.c-products__item
+					a(href="#").c-products__link
+						.c-products__container-image
+							img(src="images/polera03.png", alt="").c-products__image
+							.c-products__hidden-text|Ver Detalle
+
+						h3| CREWNECK
+						p| S/. 125.00
+				li.c-products__item
+					a(href="#").c-products__link
+						.c-products__container-image
+							img(src="images/polera04.png", alt="").c-products__image
+							.c-products__hidden-text|Ver Detalle
+
+						h3| CREWNECK
+						p| S/. 125.00
+		
+		section.l-container.c-section
+			header.c-section__header
+				h2.c-title| HOODIE AND CREWNECK
+				p| Prepárate para el otoño con chaquetas y sudaderas con capucha Con estilo propio desde el primer día
+		
+		include templates/snapbackdadhat-banner
+		section.l-container.c-section
+			header.c-section__header
+				h2.c-title| SNAPBACK AND DAD HAT
+				p| Esta va a ser la gorrra que combine perfectamente con tu estilo. Las texturas, su forma y sus colores completarán tu                              outfit de manera increíble.
+		
+		include templates/tshirt-banner
+		section.l-container.c-section
+			header.c-section__header
+				h2.c-title| T-SHIRT
+				p| Esta va a ser el t-shirt  que combine perfectamente con tu estilo su forma y sus colores completarán tu outfit de manera increíble.
+		include templates/footer	
