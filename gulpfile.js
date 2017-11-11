@@ -10,12 +10,15 @@ var filter = require('gulp-filter');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var mainBowerFiles = require('main-bower-files');
+var copy = require('gulp-copy');
 
 var jadeSources = ['src/jade/*.jade'];
 var scssSources = ['src/scss/main.scss'];
 
 // Define default destination folder
 var dest = 'dist/';
+
+
 
 gulp.task('js', function() {
 
@@ -29,7 +32,9 @@ gulp.task('js', function() {
 
 });
 
-
+gulp.task('copySlickFonts', function () {
+    gulp.src(['bower_components/slick-carousel/slick/fonts/*']).pipe(gulp.dest('dist/fonts'));
+});
 
 
 
@@ -73,7 +78,7 @@ gulp.task('comprimir-images', function(){
 });
 
 gulp.task('watch', function(){
-	gulp.watch('./src/scss/*.scss', ['styles']);
+	gulp.watch('./src/scss/*.scss', ['scss']);
 	gulp.watch('./src/jade/**/*.jade',['jade']);
 	gulp.watch('./src/images/**/*',['comprimir-images']);
 });
