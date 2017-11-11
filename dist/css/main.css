@@ -251,17 +251,28 @@ img {
     display: block;
     padding: 20px 30px; }
 
-.c-banner--main {
-  height: 100vh; }
-
-.c-banner__item {
-  height: inherit; }
-
-.c-banner__image {
-  height: inherit;
-  width: 100%;
-  object-fit: cover;
-  object-position: center center; }
+.c-banner {
+  position: relative;
+  overflow: hidden; }
+  .c-banner--main {
+    height: 100vh; }
+  .c-banner__video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%); }
+  .c-banner__item {
+    height: inherit; }
+  .c-banner__image {
+    height: inherit;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center; }
 
 .c-products {
   list-style: none;

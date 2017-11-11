@@ -32,8 +32,11 @@ gulp.task('js', function() {
 
 });
 
-gulp.task('copySlickFonts', function () {
+// esta tarea copia archivos de src a dist
+
+gulp.task('copyFilesToDist', function () {
     gulp.src(['bower_components/slick-carousel/slick/fonts/*']).pipe(gulp.dest('dist/fonts'));
+    gulp.src(['src/videos/*']).pipe(gulp.dest('dist/videos'));
 });
 
 

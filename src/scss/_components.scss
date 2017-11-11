@@ -26,8 +26,22 @@
 
 .c-banner{
 	// height: 700px; vamos a ver
+	position: relative;
+	overflow: hidden;
+	
 	&--main{
 		height: 100vh;
+	}
+	&__video{
+		position: absolute;
+		top: 50%;
+	    left: 50%;
+	    min-width: 100%;
+	    min-height: 100%;
+	    width: auto;
+	    height: auto;
+	    z-index: -100;
+	    transform: translateX(-50%) translateY(-50%);
 	}
 	&__item{
 		height: inherit;

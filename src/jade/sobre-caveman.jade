@@ -4,7 +4,10 @@ block header
 	include templates/header
 block main
 	main
-		include templates/main-banner
+		.c-banner.c-banner--main
+			video.c-banner__video(autoplay)
+				source(src="videos/nosotros-video.mp4", type="video/mp4")
+
 
 		section.c-section
 			div.c-section__content
