@@ -253,7 +253,8 @@ img {
 
 .c-banner {
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  background-color: #000; }
   .c-banner--main {
     height: 100vh; }
   .c-banner__video {
