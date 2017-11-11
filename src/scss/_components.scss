@@ -105,11 +105,13 @@
 }
 
 .c-section{
-	&__header{
-		text-align: center;
+	&__header, &__content{
 		max-width: 450px;
 		margin-left: auto;
 		margin-right: auto;
+	}
+	&__header{
+		text-align: center;
 	}
 }
 
