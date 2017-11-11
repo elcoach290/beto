@@ -4,11 +4,15 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	
+	position: fixed;
+	width: 100%;
+	z-index: 10;
+	background-color: #fff;
 }
 
 .c-menu{
 	display: flex;
+	margin: 0;
 	li{
 		list-style: none;
 	}
@@ -22,13 +26,16 @@
 
 .c-banner{
 	// height: 700px; vamos a ver
+	&--main{
+		height: 100vh;
+	}
 	&__item{
 		height: inherit;
 	}
 	&__image{
 		height: inherit;
 		width: 100%;
-		object-fit: scale-down;
+		object-fit: cover; //scale-down;
 		object-position: center center;
 	}
 }

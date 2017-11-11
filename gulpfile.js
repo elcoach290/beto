@@ -6,11 +6,36 @@ var connect = require('gulp-connect');
 var imagemin = require('gulp-imagemin'); //Compresor de imágenes  
 var imageminPngcrush = require('imagemin-pngcrush');
 var notify = require('gulp-notify'); //Muestra un mensaje callback
+var filter = require('gulp-filter');
+var concat = require('gulp-concat');
+var uglify = require('gulp-uglify');
+var mainBowerFiles = require('main-bower-files');
 
 var jadeSources = ['src/jade/*.jade'];
 var scssSources = ['src/scss/main.scss'];
 
-gulp.task('styles', function(){
+// Define default destination folder
+var dest = 'dist/';
+
+gulp.task('js', function() {
+
+	var jsFiles = ['src/js/*'];
+
+	gulp.src(mainBowerFiles().concat(jsFiles))
+		.pipe(filter('**/*.js'))
+		.pipe(concat('main.js'))
+		.pipe(uglify())
+		.pipe(gulp.dest(dest + 'js'));
+
+});
+
+
+
+
+
+
+
+gulp.task('scss', function(){
 	gulp.src(scssSources)
 	.pipe(sass())
 	.pipe(gulp.dest('./dist/css'))
@@ -54,4 +79,4 @@ gulp.task('watch', function(){
 });
  
 
-gulp.task('default', ['connect','jade', 'styles', 'watch', 'comprimir-images']);
+gulp.task('default', ['connect','jade', 'scss', 'watch', 'comprimir-images']);
