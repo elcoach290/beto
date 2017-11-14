@@ -8,6 +8,7 @@
 	width: 100%;
 	z-index: 10;
 	background-color: #fff;
+	top: 0;
 }
 
 .c-menu{
@@ -119,6 +120,9 @@
 }
 
 .c-section{
+	&--spaced{
+		padding: 100px 0;
+	}
 	&__header, &__content{
 		max-width: 450px;
 		margin-left: auto;
@@ -126,6 +130,54 @@
 	}
 	&__header{
 		text-align: center;
+	}
+}
+
+
+.c-form{
+	&__row{
+		display: flex;
+		justify-content: space-between;
+		&--fields{
+			height: 110px;
+		}
+	}
+	&__column{
+		width: 49%;
+		&--flex{
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+	}
+	&__label{
+		display: none;
+	}
+
+
+	&__field{
+		width: 100%;
+		padding: 5px;
+		font-family: inherit;
+		font-size: inherit;
+		border: solid 1px #ccc;
+		box-shadow: 0 0 5px rgba(#666, 0.3);
+		&--textarea{
+			//height: 100px;
+			height: 100%;
+			resize: none;
+		}
+	}
+
+	&__btn{
+		border: solid 1px #ccc;
+		background-color: rgba(219, 184, 154, 1);
+		box-shadow: 0 0 5px rgba(#666, 0.3);
+		padding: 10px;
+		margin: 10px 0;
+		cursor: pointer;
+		color: #fff;
+		font-size: inherit;
 	}
 }
 

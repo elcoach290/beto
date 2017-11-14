@@ -1,0 +1,26 @@
+extends templates/layout
+
+block header
+	include templates/header
+block main
+	main
+		
+		section.c-section.c-section--spaced
+			div.c-section__content
+				form.c-form
+					.c-form__row.c-form__row--fields
+						div.c-form__column.c-form__column--flex
+							label.c-form__label| Nombre:
+							input(type="text", class="c-form__field", placeholder="Nombre")
+							label.c-form__label| Email:
+							input(type="email", class="c-form__field", placeholder="Email")
+							label.c-form__label| Asunto:
+							input(type="text", class="c-form__field", placeholder="Asunto")
+						div.c-form__column
+							label.c-form__label| Mensaje:
+							textarea(class="c-form__field c-form__field--textarea", placeholder="Mensaje")
+					.c-form__row.c-form__column--flex
+						button.c-form__btn| Enviar
+
+	include templates/footer
+	

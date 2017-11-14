@@ -238,7 +238,8 @@ img {
   position: fixed;
   width: 100%;
   z-index: 10;
-  background-color: #fff; }
+  background-color: #fff;
+  top: 0; }
 
 .c-menu {
   display: flex;
@@ -322,6 +323,9 @@ img {
     color: inherit;
     text-decoration: none; }
 
+.c-section--spaced {
+  padding: 100px 0; }
+
 .c-section__header, .c-section__content {
   max-width: 450px;
   margin-left: auto;
@@ -329,3 +333,40 @@ img {
 
 .c-section__header {
   text-align: center; }
+
+.c-form__row {
+  display: flex;
+  justify-content: space-between; }
+  .c-form__row--fields {
+    height: 110px; }
+
+.c-form__column {
+  width: 49%; }
+  .c-form__column--flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+
+.c-form__label {
+  display: none; }
+
+.c-form__field {
+  width: 100%;
+  padding: 5px;
+  font-family: inherit;
+  font-size: inherit;
+  border: solid 1px #ccc;
+  box-shadow: 0 0 5px rgba(102, 102, 102, 0.3); }
+  .c-form__field--textarea {
+    height: 100%;
+    resize: none; }
+
+.c-form__btn {
+  border: solid 1px #ccc;
+  background-color: #dbb89a;
+  box-shadow: 0 0 5px rgba(102, 102, 102, 0.3);
+  padding: 10px;
+  margin: 10px 0;
+  cursor: pointer;
+  color: #fff;
+  font-size: inherit; }

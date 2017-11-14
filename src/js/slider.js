@@ -3,7 +3,7 @@ $("#mainslider").slick({
 });
 
 
-$("#products").slick({
+$("#products, #tshirts").slick({
 	infinite: true,
   	slidesToShow: 4,
   	slidesToScroll: 1
