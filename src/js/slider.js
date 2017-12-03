@@ -9,7 +9,9 @@ $("#products, #tshirts").slick({
   	slidesToScroll: 1
 });
 
+$('a.photo').zoom({url: 'images/polera-caveman-big.png'});
 
+// el mapa con select 
 
 var map;
 function myMap() {

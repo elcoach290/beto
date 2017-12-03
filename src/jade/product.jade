@@ -1,0 +1,26 @@
+extends templates/layout
+
+block header
+	include templates/header
+block main
+	main
+		
+		section.c-section.c-section--spaced
+			div.l-container
+				div.c-section__content--full
+					article.c-product
+						figure.c-product__image.c-figure
+							a.photo
+								img(src="images/polera-caveman.png", alt="Polera Caveman")
+
+							figcaption.c-figure__description
+								p| Soy la descripción de un producto. Soy el lugar ideal para agregar detalles sobre tu producto, así como tamaño, materiales, instrucciones de cuidado y de limpieza.
+						div.c-product__body
+							h2| CREWNECK
+							p| SKU: 632835642834572
+							h2| Tamaño:
+							p| One size
+							a(href="#")| Agregar al carrito 
+
+	include templates/footer
+	
