@@ -9,6 +9,7 @@
 	z-index: 10;
 	background-color: #fff;
 	top: 0;
+	border-bottom: solid 1px #ccc;
 }
 
 .c-menu{
@@ -60,7 +61,7 @@
 	// justify-content: space-between;
 	list-style: none;
 	padding: 0;
-	margin: 0;
+	margin: 40px 0;
 	text-align: center;
 	&__item{
 		// width: 24%;
@@ -108,7 +109,7 @@
 		justify-content: space-between;
 	}
 	&__col{
-		width: 32%;
+		//width: 32%;
 	}
 	&__link{
 		display: inline-block;
@@ -121,12 +122,15 @@
 
 .c-section{
 	&--spaced{
-		padding: 100px 0;
+		padding: 60px 0;
 	}
 	&__header, &__content{
 		max-width: 450px;
 		margin-left: auto;
 		margin-right: auto;
+	}
+	&__content--full{
+		display: flex;
 	}
 	&__header{
 		text-align: center;
@@ -135,6 +139,7 @@
 
 
 .c-form{
+	padding-top: 40px;
 	&__row{
 		display: flex;
 		justify-content: space-between;
@@ -181,4 +186,20 @@
 	}
 }
 
+
+.c-formmap{
+	width: 50vw;
+	display: flex;
+	justify-content: flex-end;
+	fieldset{
+		display: block;
+		width: 565px;
+		max-width: 565px;
+		border: none;
+	}
+}
+.c-map{
+	height: 400px;
+	width: 50vw;
+}
 

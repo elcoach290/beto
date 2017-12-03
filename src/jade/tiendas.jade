@@ -5,11 +5,21 @@ block header
 block main
 	main
 		
-		section.c-section.c-section--spaced
-			header.c-section__header
-				h2| Tiendas
-			div.c-section__content
-				p|  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus sapiente tempora corporis quidem, laboriosam nihil esse debitis voluptatum ea odio provident illum nisi, veniam, sequi quaerat tempore explicabo, et rerum!
+		section.c-section.c-section--spaced.u-pb-0
+			//- header.c-section__header
+				//- h2| Tiendas
+			div.c-section__content--full
+				form.c-formmap
+					fieldset
+						label
+							| Ciudades
+						select#myCity(name='myCity', onchange='changeMap(this.value)')
+							option(value='None') Seleccione una ciudad
+							option(value='LI') Lima
+							option(value='TRU') Trujillo
+							option(value='ARE') Arequipa
+				#map.c-map
+
 
 	include templates/footer
 	
