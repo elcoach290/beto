@@ -9,7 +9,10 @@ body {
   font-weight: 100; }
 
 h1 {
-  margin: 0; }
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); }
 
 img {
   max-width: 100%; }
@@ -242,12 +245,18 @@ img {
   background-color: #fff;
   top: 0;
   border-bottom: solid 1px #ccc; }
+  .c-header__navigation {
+    flex-grow: 1; }
 
 .c-menu {
   display: flex;
-  margin: 0; }
+  justify-content: space-between;
+  margin: 0;
+  padding: 0; }
   .c-menu li {
-    list-style: none; }
+    list-style: none;
+    width: 15%;
+    text-align: center; }
   .c-menu a {
     color: inherit;
     text-decoration: none;
