@@ -305,8 +305,16 @@
 }
 
 // PARALLAX
-.slick-prev, slick-next{
+.slick-prev, .slick-next{
 	z-index: 9;
+	@media screen and (max-width: 1024px){
+		width: 40px;
+		height: 40px;
+		background-color: transparent;
+		&:before{
+			font-size: 40px;
+		}
+	}
 }
 .slick-prev{
 	left: 25px;
