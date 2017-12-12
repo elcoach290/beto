@@ -13,6 +13,10 @@ h1 {
   position: absolute;
   left: 50%;
   transform: translateX(-50%); }
+  @media screen and (max-width: 1024px) {
+    h1 {
+      position: static;
+      transform: none; } }
 
 img {
   max-width: 100%; }
@@ -247,27 +251,79 @@ img {
   border-bottom: solid 1px #ccc; }
   .c-header__navigation {
     flex-grow: 1; }
+    @media screen and (max-width: 1024px) {
+      .c-header__navigation {
+        transition: transform 300ms;
+        transform: scale(0);
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(255, 255, 255, 0.9);
+        z-index: 999999; }
+        .c-header__navigation--visible {
+          transform: scale(1); } }
 
 .c-menu {
   display: flex;
   justify-content: space-between;
   margin: 0;
   padding: 0; }
+  @media screen and (max-width: 1024px) {
+    .c-menu {
+      flex-direction: column; } }
   .c-menu li {
     list-style: none;
     width: 15%;
     text-align: center; }
+    @media screen and (max-width: 1024px) {
+      .c-menu li {
+        width: auto;
+        font-size: 5vh;
+        font-weight: bold; } }
   .c-menu a {
     color: inherit;
     text-decoration: none;
     display: block;
     padding: 20px 30px; }
 
+.c-buttonmenu {
+  display: none; }
+  .c-buttonmenu--x {
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    text-indent: -999px;
+    position: relative;
+    background-color: transparent;
+    border: none;
+    margin: 15px; }
+    .c-buttonmenu--x:after, .c-buttonmenu--x:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      margin-top: -1px;
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: #000;
+      transform: rotate(-45deg); }
+    .c-buttonmenu--x:after {
+      transform: rotate(45deg); }
+  @media screen and (max-width: 1024px) {
+    .c-buttonmenu {
+      display: inline-block; } }
+
 .c-banner {
   position: relative;
   overflow: hidden; }
   .c-banner--main {
     height: 100vh; }
+    @media screen and (max-width: 1024px) {
+      .c-banner--main {
+        height: auto; } }
   .c-banner__video {
     position: absolute;
     top: 50%;
@@ -301,7 +357,9 @@ img {
     position: relative;
     overflow: hidden; }
   .c-products__image {
-    max-width: 100%; }
+    max-width: 100%;
+    display: block;
+    margin: 0 auto; }
   .c-products__hidden-text {
     position: absolute;
     width: 100%;
@@ -327,6 +385,9 @@ img {
   .c-footer__content {
     display: flex;
     justify-content: space-between; }
+    @media screen and (max-width: 1024px) {
+      .c-footer__content {
+        flex-direction: column; } }
   .c-footer__link {
     display: inline-block;
     padding: 5px 30px;
@@ -416,6 +477,15 @@ img {
   .photo img {
     background-color: #FFF;
     height: 400px; }
+
+.slick-prev, slick-next {
+  z-index: 9; }
+
+.slick-prev {
+  left: 25px; }
+
+.slick-next {
+  right: 25px; }
 
 .u-pb-0 {
   padding-bottom: 0 !important; }

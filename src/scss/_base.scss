@@ -2,11 +2,13 @@
 	box-sizing: border-box;
 }
 
+
 body{
 	margin: 0;
 	font-family: helvetica, sans-serif;
 	line-height: 1.4;
 	font-weight: 100;
+
 }
 
 h1{
@@ -14,6 +16,10 @@ h1{
 	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);
+	@media screen and (max-width: 1024px){
+		position: static;
+		transform: none;
+	}
 }
 
 img{
