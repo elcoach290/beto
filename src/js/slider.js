@@ -59,7 +59,26 @@ function myMap() {
     zoom: 8
   };
   map = new google.maps.Map(mapCanvas, mapOptions);
+
+  var myLatlng1 = {lat: -12.029017, lng: -77.1031831};
+  var marker1 = new google.maps.Marker({
+      position: myLatlng1,
+      title:"Hello World!",
+      map: map
+  });
+
+  var myLatlng2 = {lat: -8.1178023, lng: -79.0313751};
+  var marker2 = new google.maps.Marker({
+      position: myLatlng2,
+      title:"Hello World!",
+      map: map
+  });
+
+
 }
+
+
+
 
 myMap();
 
