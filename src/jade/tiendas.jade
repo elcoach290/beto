@@ -12,8 +12,10 @@ block main
 				form.c-formmap
 					fieldset
 						label
-							| Ciudades
-						select#myCity(name='myCity', onchange='changeMap(this.value)')
+							| ENCUENTRA UNA TIENDA CERCA DE CASA
+						br
+						br
+						select#myCity(name='myCity', class='c-form__field c-form__field--select')
 							option(value='None') Seleccione una ciudad
 							option(value='LI') Lima
 							option(value='TRU') Trujillo

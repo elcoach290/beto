@@ -405,8 +405,14 @@ img {
   margin-left: auto;
   margin-right: auto; }
 
+.c-section__content {
+  padding: 60px 0; }
+
 .c-section__content--full {
   display: flex; }
+  @media screen and (max-width: 1024px) {
+    .c-section__content--full {
+      flex-direction: column; } }
 
 .c-section__header {
   text-align: center;
@@ -434,10 +440,16 @@ img {
     font-family: inherit;
     font-size: inherit;
     border: solid 1px #ccc;
-    box-shadow: 0 0 5px rgba(102, 102, 102, 0.3); }
+    box-shadow: 0 0 5px rgba(102, 102, 102, 0.3);
+    -moz-appearance: none;
+    appearance: none; }
     .c-form__field--textarea {
       height: 100%;
       resize: none; }
+    .c-form__field--select {
+      background-image: url("../images/chevron-down.svg");
+      background-repeat: no-repeat;
+      background-position: right 10px center; }
   .c-form__btn {
     border: solid 1px #ccc;
     background-color: #dbb89a;
@@ -456,11 +468,23 @@ img {
     display: block;
     width: 565px;
     max-width: 565px;
-    border: none; }
+    border: none;
+    padding: 60px; }
+    @media screen and (max-width: 767px) {
+      .c-formmap fieldset {
+        padding: 0; } }
+  @media screen and (max-width: 1024px) {
+    .c-formmap {
+      width: auto;
+      justify-content: center;
+      text-align: center; } }
 
 .c-map {
   height: 400px;
   width: 50vw; }
+  @media screen and (max-width: 1024px) {
+    .c-map {
+      width: 100%; } }
 
 .c-product {
   display: flex;
