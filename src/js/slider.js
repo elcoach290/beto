@@ -2,7 +2,8 @@
 
 
 $(".c-buttonmenu").on("click", function(){
-  $(".c-header__navigation").toggleClass("c-header__navigation--visible");
+  //$(".c-header__navigation").toggleClass("c-header__navigation--visible");
+  $("body, html").toggleClass("u-navigation--visible");
 });
 
 

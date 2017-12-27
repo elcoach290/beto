@@ -1,3 +1,9 @@
 .u-pb-0{
 	padding-bottom: 0 !important;
 }
+
+.u-navigation--visible{
+	@media screen and (max-width: 1024px){
+		overflow: hidden;
+	}
+}

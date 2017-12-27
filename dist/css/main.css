@@ -265,7 +265,7 @@ img {
         left: 0;
         background-color: rgba(255, 255, 255, 0.9);
         z-index: 999999; }
-        .c-header__navigation--visible {
+        .u-navigation--visible .c-header__navigation {
           transform: translateX(0); } }
 
 .c-menu {
@@ -546,3 +546,7 @@ img {
 
 .u-pb-0 {
   padding-bottom: 0 !important; }
+
+@media screen and (max-width: 1024px) {
+  .u-navigation--visible {
+    overflow: hidden; } }
