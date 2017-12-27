@@ -257,7 +257,7 @@ img {
     @media screen and (max-width: 1024px) {
       .c-header__navigation {
         transition: transform 300ms;
-        transform: translateX(-100%);
+        transform: translateX(100%);
         position: fixed;
         top: 0;
         right: 0;
@@ -304,7 +304,8 @@ img {
   text-indent: -999px;
   position: relative;
   clip-path: polygon(0% 50%, 50% 0%, 100% 50%, 50% 100%);
-  cursor: pointer; }
+  cursor: pointer;
+  transition: transform 200ms; }
   .c-buttonmenu:before {
     content: "";
     display: block;
@@ -315,6 +316,8 @@ img {
     left: 0;
     top: 50%;
     margin-top: -4px; }
+  .u-navigation--visible .c-buttonmenu:not(.c-buttonmenu--x) {
+    transform: rotate(45deg); }
   .c-buttonmenu--x {
     clip-path: none;
     height: 40px;
@@ -347,9 +350,8 @@ img {
     height: 100vh; }
     @media screen and (max-width: 1024px) {
       .c-banner--main {
-        height: 75vh; } }
-    .c-banner--main .slick-list, .c-banner--main .slick-track, .c-banner--main .slick-slide > div {
-      height: inherit; }
+        height: auto;
+        margin-top: 46px; } }
   .c-banner__video {
     position: absolute;
     top: 50%;
@@ -402,6 +404,10 @@ img {
   width: 200px;
   padding: 15px 30px;
   text-align: center; }
+  @media screen and (max-width: 1024px) {
+    .c-title {
+      width: auto;
+      font-size: 17px; } }
 
 .c-footer {
   background-color: #2f2e2e;
