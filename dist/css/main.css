@@ -347,7 +347,9 @@ img {
     height: 100vh; }
     @media screen and (max-width: 1024px) {
       .c-banner--main {
-        height: auto; } }
+        height: 75vh; } }
+    .c-banner--main .slick-list, .c-banner--main .slick-track, .c-banner--main .slick-slide > div {
+      height: inherit; }
   .c-banner__video {
     position: absolute;
     top: 50%;
