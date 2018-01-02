@@ -242,13 +242,16 @@ img {
 
 .o-cta {
   padding: 15px;
-  background-color: crimson;
+  background-color: #DE5021;
   display: block;
   margin: 10px 0;
   color: white;
   text-transform: uppercase;
   text-decoration: none;
-  text-align: center; }
+  text-align: center;
+  transition: background-color 300ms; }
+  .o-cta:hover {
+    background-color: rgba(222, 80, 33, 0.6); }
 
 .c-header {
   padding-left: 15px;
@@ -452,6 +455,13 @@ img {
 
 .c-section__content {
   padding: 60px 0; }
+  @media screen and (max-width: 1024px) {
+    .c-section__content {
+      padding-left: 15px;
+      padding-right: 15px; } }
+  @media screen and (max-width: 767px) {
+    .c-section__content {
+      max-width: none; } }
 
 .c-section__content--full {
   display: flex; }
@@ -471,8 +481,17 @@ img {
     justify-content: space-between; }
     .c-form__row--fields {
       height: 110px; }
+      @media screen and (max-width: 767px) {
+        .c-form__row--fields {
+          height: auto; } }
+    @media screen and (max-width: 767px) {
+      .c-form__row {
+        flex-direction: column; } }
   .c-form__column {
     width: 49%; }
+    @media screen and (max-width: 767px) {
+      .c-form__column {
+        width: auto; } }
     .c-form__column--flex {
       display: flex;
       flex-direction: column;
@@ -489,9 +508,15 @@ img {
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none; }
+    @media screen and (max-width: 767px) {
+      .c-form__field {
+        margin-top: 10px; } }
     .c-form__field--textarea {
       height: 100%;
       resize: none; }
+      @media screen and (max-width: 767px) {
+        .c-form__field--textarea {
+          height: 150px; } }
     .c-form__field--select {
       background-image: url("../images/chevron-down.svg");
       background-repeat: no-repeat;
@@ -518,7 +543,7 @@ img {
     padding: 60px; }
     @media screen and (max-width: 767px) {
       .c-formmap fieldset {
-        padding: 0; } }
+        padding: 15px; } }
   @media screen and (max-width: 1024px) {
     .c-formmap {
       width: auto;
@@ -550,6 +575,8 @@ img {
     @media screen and (max-width: 767px) {
       .c-product__body {
         width: auto; } }
+  .c-product__title, .c-product__subtitle {
+    font-weight: lighter; }
 
 .photo {
   display: block;

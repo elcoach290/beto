@@ -246,6 +246,14 @@
 	}
 	&__content{
 		padding: 60px 0;
+		@media screen and (max-width: 1024px){
+			padding-left: 15px;
+			padding-right: 15px;
+			
+		}
+		@media screen and (max-width: 767px){
+			max-width: none;
+		}
 	}
 	&__content--full{
 		display: flex;
@@ -268,10 +276,19 @@
 		justify-content: space-between;
 		&--fields{
 			height: 110px;
+			@media screen and (max-width: 767px){
+				height: auto;
+			}
+		}
+		@media screen and (max-width: 767px){
+			flex-direction: column;
 		}
 	}
 	&__column{
 		width: 49%;
+		@media screen and (max-width: 767px){
+			width: auto;
+		}
 		&--flex{
 			display: flex;
 			flex-direction: column;
@@ -293,10 +310,16 @@
 		-moz-appearance: none;
 		-webkit-appearance: none;
 		appearance: none;
+		@media screen and (max-width: 767px){
+			margin-top: 10px;
+		}
 		&--textarea{
 			//height: 100px;
 			height: 100%;
 			resize: none;
+			@media screen and (max-width: 767px){
+				height: 150px;
+			}
 		}
 		&--select{
 			background-image: url("../images/chevron-down.svg");
@@ -329,7 +352,7 @@
 		border: none;
 		padding: 60px;
 		@media screen and (max-width: 767px){
-			padding: 0;
+			padding: 15px;
 		}
 	}
 	@media screen and (max-width: 1024px){
@@ -366,6 +389,9 @@
 		@media screen and (max-width: 767px){
 			width: auto;
 		}
+	}
+	&__title, &__subtitle{
+		font-weight: lighter;
 	}
 }
 

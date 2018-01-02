@@ -6,11 +6,15 @@
 
 .o-cta{
 	padding: 15px;
-	background-color: crimson;
+	background-color: #DE5021;
 	display: block;
 	margin: 10px 0;
 	color: white;
 	text-transform: uppercase;
 	text-decoration: none;
-	text-align: center;	
+	text-align: center;
+	transition: background-color 300ms;
+	&:hover{
+		background-color: rgba(#DE5021, 0.6);
+	}	
 }
