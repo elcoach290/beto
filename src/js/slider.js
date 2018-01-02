@@ -6,6 +6,24 @@ $(".c-buttonmenu").on("click", function(){
   $("body, html").toggleClass("u-navigation--visible");
 });
 
+var $accordion = $(".c-accordion");
+
+if($accordion.length > 0){
+  $accordion.on("click","h2", function(){
+    if($(this).next().is(":visible")){
+      $(this).next().slideUp();
+      $(this).removeClass("active");
+    }else{
+      $(this).parent().find("div").slideUp();
+      $(this).parent().find("h2").removeClass("active");
+      $(this).next().slideDown();
+      $(this).addClass("active");
+    }
+  });
+}
+
+$accordion.find("h2").first().trigger("click");
+
 
 
 $("#mainslider").slick({
@@ -110,4 +128,8 @@ function changeMap(city) {
 
 //, onchange='changeMap(this.value)'
 $("#myCity").on("change", changeMap).trigger("change");
+
+
+
+
 

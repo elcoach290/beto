@@ -240,6 +240,16 @@ img {
 .o-button {
   display: inline-block; }
 
+.o-cta {
+  padding: 15px;
+  background-color: crimson;
+  display: block;
+  margin: 10px 0;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center; }
+
 .c-header {
   padding-left: 15px;
   padding-right: 15px;
@@ -477,6 +487,7 @@ img {
     border: solid 1px #ccc;
     box-shadow: 0 0 5px rgba(102, 102, 102, 0.3);
     -moz-appearance: none;
+    -webkit-appearance: none;
     appearance: none; }
     .c-form__field--textarea {
       height: 100%;
@@ -524,10 +535,21 @@ img {
 .c-product {
   display: flex;
   justify-content: space-between; }
+  @media screen and (max-width: 767px) {
+    .c-product {
+      flex-direction: column; } }
   .c-product__image {
-    width: 45%; }
+    width: 45%;
+    margin-left: 0;
+    margin-right: 0; }
+    @media screen and (max-width: 767px) {
+      .c-product__image {
+        width: auto; } }
   .c-product__body {
     width: 45%; }
+    @media screen and (max-width: 767px) {
+      .c-product__body {
+        width: auto; } }
 
 .photo {
   display: block;
@@ -552,6 +574,30 @@ img {
 
 .slick-next {
   right: 25px; }
+
+.c-accordion {
+  border-bottom: solid 1px black;
+  margin-top: 40px; }
+  .c-accordion h2 {
+    margin: 0;
+    text-transform: uppercase;
+    display: flex;
+    font-weight: 300;
+    font-size: 17px;
+    padding: 5px 0;
+    justify-content: space-between;
+    border-top: solid 1px black;
+    cursor: pointer; }
+    .c-accordion h2:after {
+      content: "+"; }
+    .c-accordion h2.active:after {
+      content: "-"; }
+  .c-accordion p {
+    margin-top: 0;
+    font-size: 13px; }
+  .c-accordion div {
+    display: none;
+    padding: 1px 0; }
 
 .u-pb-0 {
   padding-bottom: 0 !important; }

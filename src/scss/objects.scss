@@ -1,5 +1,16 @@
 /* objetos */
 
 .o-button{
-	display: inline-block
+	display: inline-block;
+}
+
+.o-cta{
+	padding: 15px;
+	background-color: crimson;
+	display: block;
+	margin: 10px 0;
+	color: white;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;	
 }

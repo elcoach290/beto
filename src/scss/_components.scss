@@ -291,6 +291,7 @@
 		border: solid 1px #ccc;
 		box-shadow: 0 0 5px rgba(#666, 0.3);
 		-moz-appearance: none;
+		-webkit-appearance: none;
 		appearance: none;
 		&--textarea{
 			//height: 100px;
@@ -349,11 +350,22 @@
 .c-product{
 	display: flex;
 	justify-content: space-between;
+	@media screen and (max-width: 767px){
+		flex-direction: column;
+	}
 	&__image{
 		width: 45%;
+		margin-left: 0;
+		margin-right: 0;
+		@media screen and (max-width: 767px){
+			width: auto;
+		}
 	}
 	&__body{
 		width: 45%;
+		@media screen and (max-width: 767px){
+			width: auto;
+		}
 	}
 }
 
@@ -386,3 +398,36 @@
 .slick-next{
 	right: 25px;
 }
+
+
+.c-accordion{
+	border-bottom: solid 1px black;
+	margin-top: 40px;
+	h2{
+		margin: 0;
+		text-transform: uppercase;
+		display: flex;
+		font-weight: 300;
+		font-size: 17px;
+		padding: 5px 0;
+		justify-content: space-between;
+		border-top: solid 1px black;
+		cursor: pointer;
+		&:after{
+			content: "+";
+		}
+		&.active:after{
+			content: "-";
+		}
+	}
+	p{
+		margin-top: 0;
+		font-size: 13px;
+	}
+	div{
+		display: none;
+		padding: 1px 0;
+	}
+}
+
+
